@@ -63,10 +63,14 @@
 
 
 #ifdef _MSC_VER
+#ifdef bson_shared_EXPORTS
 #ifdef BSON_COMPILATION
 #define BSON_API __declspec(dllexport)
 #else
 #define BSON_API __declspec(dllimport)
+#endif
+#else
+#define BSON_API
 #endif
 #define BSON_CALL __cdecl
 #elif defined(__GNUC__)

@@ -32,7 +32,7 @@ mkdir cbuild
 cd cbuild
 
 CMAKE="/cygdrive/c/cmake/bin/cmake"
-"$CMAKE" -G "$CC" "-DCMAKE_INSTALL_PREFIX=C:/libbson" ..
+"$CMAKE" -G "$CC" "-DCMAKE_INSTALL_PREFIX=C:/libbson" "-DENABLE_EXAMPLES:BOOL=ON" ..
 "$BUILD" /m ALL_BUILD.vcxproj
 "$BUILD" /m INSTALL.vcxproj
 
